@@ -238,19 +238,19 @@ importers:
         specifier: ^4.0.0
         version: 4.3.0
       '@types/node':
-        specifier: 'catalog:'
+        specifier: ^25.3.3
         version: 25.6.2
       '@types/react':
-        specifier: 'catalog:'
+        specifier: ^19.2.0
         version: 19.2.14
       '@types/react-dom':
-        specifier: 'catalog:'
+        specifier: ^19.2.0
         version: 19.2.3(@types/react@19.2.14)
       postcss:
         specifier: ^8.5.0
         version: 8.5.14
       tailwindcss:
-        specifier: 'catalog:'
+        specifier: ^4.1.14
         version: 4.3.0
       typescript:
         specifier: ~5.9.3
