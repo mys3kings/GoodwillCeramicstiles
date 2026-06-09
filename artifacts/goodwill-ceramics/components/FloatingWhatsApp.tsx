@@ -54,7 +54,7 @@ export default function FloatingWhatsApp() {
         {/* Pulse ring */}
         <motion.div
           animate={{ scale: [1, 1.5, 1], opacity: [0.6, 0, 0.6] }}
-          transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
+          transition={{ repeat: Infinity, duration: 2.5 }}
           className="absolute inset-0 rounded-full bg-[#25d366]/50"
         />
       </motion.a>

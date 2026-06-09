@@ -3,15 +3,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.2, duration: 0.9, ease: "easeOut" },
-  }),
-};
-
 export default function Hero() {
   const handleNav = (href: string) => {
     const el = document.querySelector(href);
@@ -23,7 +14,6 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background image */}
       <Image
         src="https://res.cloudinary.com/dsxeqehhp/image/upload/v1781001051/Screenshot_20260609-113020_aqsb6k.jpg"
         alt="Premium tile showroom"
@@ -33,18 +23,15 @@ export default function Hero() {
         sizes="100vw"
       />
 
-      {/* Dark gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40" />
 
-      {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto">
         {/* Eyebrow */}
         <motion.div
-          custom={0}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0, duration: 0.9 }}
           className="mb-6"
         >
           <span className="inline-flex items-center gap-3 text-xs sm:text-sm tracking-[0.4em] uppercase text-[#c9a35b] font-medium">
@@ -56,10 +43,9 @@ export default function Hero() {
 
         {/* Main heading */}
         <motion.h1
-          custom={1}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.9 }}
           className="text-4xl sm:text-6xl lg:text-8xl font-bold text-white leading-tight mb-6 text-shadow-lg"
           style={{ fontFamily: "'Cinzel', serif", letterSpacing: "0.02em" }}
         >
@@ -71,10 +57,9 @@ export default function Hero() {
 
         {/* Subtext */}
         <motion.p
-          custom={2}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.9 }}
           className="text-base sm:text-lg lg:text-xl text-white/75 max-w-2xl mx-auto mb-10 leading-relaxed font-light"
           style={{ fontFamily: "'Cormorant Garamond', serif" }}
         >
@@ -83,10 +68,9 @@ export default function Hero() {
 
         {/* Buttons */}
         <motion.div
-          custom={3}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.9 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <button
@@ -115,7 +99,7 @@ export default function Hero() {
           <span className="text-white/40 text-xs tracking-widest uppercase">Scroll</span>
           <motion.div
             animate={{ y: [0, 8, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+            transition={{ repeat: Infinity, duration: 1.5 }}
             className="w-px h-8 bg-gradient-to-b from-[#c9a35b] to-transparent"
           />
         </motion.div>
