@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-gold: #c9a35b;
+  --color-gold-light: #e0c080;
+  --color-gold-dark: #a07830;
+  --font-sans: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Cinzel", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+    font-family: "Inter", sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: "Cinzel", serif;
+  }
+}
+
+@layer utilities {
+  .gold-text {
+    color: #c9a35b;
+  }
+
+  .gold-border {
+    border-color: #c9a35b;
+  }
+
+  .gold-bg {
+    background-color: #c9a35b;
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 24px rgba(0,0,0,0.7);
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(201, 163, 91, 0.2);
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #c9a35b;
+    margin: 16px auto 0;
+  }
+}

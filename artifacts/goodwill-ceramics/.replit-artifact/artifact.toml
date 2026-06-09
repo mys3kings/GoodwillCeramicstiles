@@ -1,0 +1,25 @@
+kind = "web"
+previewPath = "/"
+title = "Goodwill Ceramics Tiles"
+version = "1.0.0"
+id = "artifacts/goodwill-ceramics"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19177
+
+[services.development]
+run = "pnpm --filter @workspace/goodwill-ceramics run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/goodwill-ceramics", "run", "build" ]
+run = "pnpm --filter @workspace/goodwill-ceramics run start"
+
+[services.env]
+PORT = "19177"
